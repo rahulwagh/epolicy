@@ -1,14 +1,16 @@
 package org.epolicy.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import lombok.Data;
+
+import javax.persistence.*;
 import java.util.Date;
 
 /**
  * Created by rahulwagh on 07-06-2017.
  */
+@Data
 @Entity
+@Table(name = "user")
 public class User {
 
     @Id
@@ -27,79 +29,12 @@ public class User {
 
     private String cityName;
 
+    @OneToOne
+    @JoinColumn(name = "country_id")
     private Country country;
 
+    @OneToOne
+    @JoinColumn(name = "user_id")
     private UserType userType;
 
-    public long getId() {
-        return id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public Date getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public String getCityName() {
-        return cityName;
-    }
-
-    public Country getCountry() {
-        return country;
-    }
-
-    public UserType getUserType() {
-        return userType;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public void setDateOfBirth(Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public void setCityName(String cityName) {
-        this.cityName = cityName;
-    }
-
-    public void setCountry(Country country) {
-        this.country = country;
-    }
-
-    public void setUserType(UserType userType) {
-        this.userType = userType;
-    }
 }
