@@ -1,7 +1,12 @@
 CREATE TABLE country (
   id           BIGINT NOT NULL AUTO_INCREMENT,
-  country_name VARCHAR(255),
-  PRIMARY KEY (id)
+  iso char(2) NOT NULL,
+  name varchar(80) NOT NULL,
+  nicename varchar(80) NOT NULL,
+  iso3 char(3) DEFAULT NULL,
+  numcode smallint(6) DEFAULT NULL,
+  phonecode int(5) NOT NULL,
+  PRIMARY KEY (`id`)
 );
 CREATE TABLE user (
   id            BIGINT NOT NULL AUTO_INCREMENT,

@@ -16,9 +16,18 @@ import javax.persistence.Table;
 public class Country {
 
     @Id
-    @GeneratedValue
-    private long id;
+    private Long id;
 
-    private String countryName;
+    private String iso;
+
+    private String name;
+
+    private String nicename;
+
+    private String iso3;
+
+    private Long numcode;
+
+    private Long phonecode;
 
 }
