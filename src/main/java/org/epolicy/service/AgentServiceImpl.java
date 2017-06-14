@@ -1,6 +1,6 @@
 package org.epolicy.service;
 
-import org.epolicy.entity.Country;
+import org.epolicy.domain.Country;
 import org.epolicy.repository.CountryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

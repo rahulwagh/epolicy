@@ -1,6 +1,6 @@
 package org.epolicy.service;
 
-import org.epolicy.entity.Country;
+import org.epolicy.domain.Country;
 
 import java.util.List;
 

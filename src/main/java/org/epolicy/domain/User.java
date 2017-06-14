@@ -1,4 +1,4 @@
-package org.epolicy.entity;
+package org.epolicy.domain;
 
 import lombok.Data;
 

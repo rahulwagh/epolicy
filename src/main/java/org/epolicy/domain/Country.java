@@ -1,9 +1,8 @@
-package org.epolicy.entity;
+package org.epolicy.domain;
 
 import lombok.Data;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 

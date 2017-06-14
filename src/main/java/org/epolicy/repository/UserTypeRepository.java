@@ -1,6 +1,6 @@
 package org.epolicy.repository;
 
-import org.epolicy.entity.UserType;
+import org.epolicy.domain.UserType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

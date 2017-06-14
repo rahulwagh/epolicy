@@ -1,6 +1,6 @@
 package org.epolicy.controller.agent;
 
-import org.epolicy.entity.Country;
+import org.epolicy.domain.Country;
 import org.epolicy.service.AgentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
