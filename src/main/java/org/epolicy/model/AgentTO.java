@@ -1,18 +1,12 @@
-package org.epolicy.domain;
+package org.epolicy.model;
 
-import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Date;
 
 /**
- * Created by rahulwagh on 07-06-2017.
+ * Created by rahulwagh on 14-06-2017.
  */
-@Entity
-@Table(name = "user")
-public class User implements Serializable {
+public class AgentTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private String firstName;
@@ -27,13 +21,9 @@ public class User implements Serializable {
 
     private String cityName;
 
-    @OneToOne
-    @JoinColumn(name = "country_id")
-    private Country country;
+    private CountryTO country;
 
-    @OneToOne
-    @JoinColumn(name = "user_id")
-    private UserType userType;
+    private UserTypeTO userType;
 
     public long getId() {
         return id;
@@ -91,19 +81,19 @@ public class User implements Serializable {
         this.cityName = cityName;
     }
 
-    public Country getCountry() {
+    public CountryTO getCountry() {
         return country;
     }
 
-    public void setCountry(Country country) {
+    public void setCountry(CountryTO country) {
         this.country = country;
     }
 
-    public UserType getUserType() {
+    public UserTypeTO getUserType() {
         return userType;
     }
 
-    public void setUserType(UserType userType) {
+    public void setUserType(UserTypeTO userType) {
         this.userType = userType;
     }
 }

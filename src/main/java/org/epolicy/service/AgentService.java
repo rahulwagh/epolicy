@@ -1,6 +1,7 @@
 package org.epolicy.service;
 
 import org.epolicy.domain.Country;
+import org.epolicy.model.AgentTO;
 
 import java.util.List;
 
@@ -10,4 +11,6 @@ import java.util.List;
 public interface AgentService {
 
     List<Country> getAllCountry();
+
+    void registerAgent(AgentTO agentTO);
 }

@@ -1,13 +1,11 @@
 package org.epolicy.controller.agent;
 
 import org.epolicy.domain.Country;
+import org.epolicy.model.AgentTO;
 import org.epolicy.service.AgentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,5 +28,13 @@ public class AgentController {
     @ResponseStatus(HttpStatus.OK)
     public List<Country> getAllCountryName() {
         return agentService.getAllCountry();
+    }
+
+    @RequestMapping(value = "/api/epolicy/agent/register",
+            method = RequestMethod.POST,
+            produces = {"application/json", "application/xml"})
+    @ResponseStatus(HttpStatus.OK)
+    public void registerAgent(@RequestBody AgentTO agentTO) {
+        agentService.registerAgent(agentTO);
     }
 }

@@ -1,20 +1,10 @@
-package org.epolicy.domain;
-
-import lombok.Data;
-
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+package org.epolicy.model;
 
 /**
- * Created by rahulwagh on 07-06-2017.
+ * Created by rahulwagh on 20-06-2017.
  */
-@Data
-@Entity
-@Table(name = "country")
-public class Country {
+public class CountryTO {
 
-    @Id
     private Long id;
 
     private String iso;

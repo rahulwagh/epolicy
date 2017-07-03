@@ -1,29 +1,16 @@
-package org.epolicy.domain;
-
-import lombok.*;
-
-import javax.persistence.*;
+package org.epolicy.model;
 
 /**
- * Created by rahulwagh on 07-06-2017.
+ * Created by rahulwagh on 20-06-2017.
  */
-/*@Data
-//@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter*/
-@Entity
-@Table(name = "user_type")
-public class UserType {
+public class UserTypeTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private String userType;
 
     private String description;
+
 
     public long getId() {
         return id;
